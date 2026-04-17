@@ -13,4 +13,8 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   root "pages#home"
+
+  # provee rutas para el recurso articles, incluyendo index, show, new, create, edit, update y destroy
+  # only: van los métodos que queremos generar
+  resources :articles, only: [ :show ]
 end
