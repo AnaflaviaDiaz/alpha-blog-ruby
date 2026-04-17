@@ -16,5 +16,7 @@ Rails.application.routes.draw do
 
   # provee rutas para el recurso articles, incluyendo index, show, new, create, edit, update y destroy
   # only: van los métodos que queremos generar
-  resources :articles, only: [ :show ]
+  # :show para mostrar un artículo específico
+  # :index para mostrar una lista de artículos
+  resources :articles, only: [ :show, :index ]
 end
