@@ -18,5 +18,5 @@ Rails.application.routes.draw do
   # only: van los métodos que queremos generar
   # :show para mostrar un artículo específico
   # :index para mostrar una lista de artículos
-  resources :articles, only: [ :show, :index, :new, :create ]
+  resources :articles, only: [ :show, :index, :new, :create, :edit, :update ]
 end
