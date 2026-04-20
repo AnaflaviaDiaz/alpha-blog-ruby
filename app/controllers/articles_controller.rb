@@ -14,7 +14,12 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(params.require(:article).permit(:title, :description))
-    @article.save
-    redirect_to @article
+    if @article.save
+      flash[:notice] = "Article was successfully created."
+      redirect_to @article
+    # cuando el formuario no es valido, se debe renderizar de nuevo el formulario
+    else
+      render :new
+    end
   end
 end

@@ -24,6 +24,11 @@
   </head>
 
   <body>
+    <%# esto como los toast, mensajes/alertas %>
+    <% flash.each do |name, msg| %>
+      <%= msg %>
+    <% end %>  
+
     <%= yield %>
   </body>
 </html>
