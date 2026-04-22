@@ -52,6 +52,9 @@ jobs:
         with:
           bundler-cache: true
 
+      - name: Fix binstub permissions
+        run: chmod +x bin/rubocop
+
       - name: Prepare RuboCop cache
         uses: actions/cache@v4
         env:
