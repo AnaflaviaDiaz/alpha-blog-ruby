@@ -55,6 +55,9 @@ jobs:
       - name: Fix binstub permissions
         run: chmod +x bin/rubocop
 
+      - name: Make bin scripts executable
+        run: chmod +x bin/*
+
       - name: Prepare RuboCop cache
         uses: actions/cache@v4
         env:
