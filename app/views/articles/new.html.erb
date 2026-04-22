@@ -13,9 +13,7 @@
   </div>
 <% end %>
 
-
 <%= form_with scope: :article, url: articles_path, local: true, data: { turbo: false } do |f| %>
-
   <p>
     <%= f.label :title %><br/>
     <%= f.text_field :title %>
@@ -29,5 +27,8 @@
   <p>
     <%= f.submit %>
   </p>
-
 <% end %>
+
+<p>
+  <%= link_to 'Back', articles_path %>
+</p>
