@@ -1,0 +1,9 @@
+<%# que empiece con _name-file para que sea un partial, 
+<%# es decir, un fragmento de código reutilizable 
+<%# en otras vistas. En este caso, se llama _messages.html.erb  %>
+<%# porque se usará para mostrar mensajes flash (notificaciones)  %>
+<%# en la aplicación. %>
+
+<% flash.each do |name, msg| %>
+  <%= msg %>
+<% end %> 
